@@ -1,0 +1,46 @@
+---
+const socialLinks = [
+  {
+    name: 'WhatsApp',
+    url: 'https://wa.me/573012244006',
+    icon: 'ri:whatsapp-fill',
+  },
+  {
+    name: 'LinkedIn',
+    url: '#', // Add your LinkedIn URL here
+    icon: 'ri:linkedin-box-fill',
+  },
+  {
+    name: 'Email',
+    url: 'mailto:Katywska02@gmail.com',
+    icon: 'ri:mail-fill',
+  },
+];
+---
+
+<header class="flex justify-between items-center py-6">
+  <h1 class="text-2xl font-bold text-gray-900">GI</h1>
+  <nav>
+    <ul class="flex gap-6">
+      {
+        socialLinks.map((link) => (
+          <li>
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-600 hover:text-primary transition-colors"
+            >
+              <span class="sr-only">{link.name}</span>
+              <iconify-icon icon={link.icon} width="24"></iconify-icon>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
+
+<script>
+  import 'https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js';
+</script>

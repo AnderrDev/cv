@@ -1,0 +1,41 @@
+---
+const skills = [
+  {
+    category: 'Habilidades Técnicas',
+    items: [
+      'Análisis de Datos: Microsoft Excel y Suite Office',
+      'Herramientas Digitales Empresariales',
+      'Conocimientos Financieros',
+      'Gestión de Proyectos',
+      'Investigación & Logística',
+    ],
+  },
+  {
+    category: 'Idiomas',
+    items: ['Español: Nativo', 'Inglés: Intermedio Avanzado (B2)'],
+  },
+];
+---
+
+<section id="skills" class="py-20" data-aos="fade-up">
+  <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Habilidades</h2>
+  <div class="grid md:grid-cols-2 gap-8">
+    {
+      skills.map((skillGroup) => (
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6">{skillGroup.category}</h3>
+          <ul class="space-y-4">
+            {skillGroup.items.map((skill) => (
+              <li class="flex items-center gap-3 group">
+                <span class="flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <iconify-icon icon="ri:check-line"></iconify-icon>
+                </span>
+                <span class="text-gray-600 text-lg">{skill}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</section>

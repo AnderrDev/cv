@@ -1,0 +1,61 @@
+---
+const experiences = [
+  {
+    company: 'Ecopetrol S.A.',
+    position: 'Practicante de Relacionamiento Institucional y Gestión',
+    period: 'Jul 2024 – Ene 2025',
+    responsibilities: [
+      'Elaboré y presenté informes estratégicos, documentos de petición y materiales para eventos.',
+      'Lideré proyectos de Sofisticación Digital y HSE.',
+      'Contribuí a mejorar la eficiencia operativa mediante coordinación de actualizaciones.',
+    ],
+  },
+  {
+    company: 'Restaurante Yerbabuena',
+    position: 'Auxiliar Administrativo',
+    period: 'Nov 2022 – Dic 2023',
+    responsibilities: [
+      'Gestioné el control documental y la organización de eventos.',
+      'Ofrecí atención personalizada en gestión de consultas y reservas.',
+      'Mantuve registros precisos y elaboré reportes operativos.',
+    ],
+  },
+  {
+    company: 'Secretaría de Educación',
+    position: 'Asistente Financiero',
+    period: 'Mar 2018 – Nov 2018',
+    responsibilities: [
+      'Organicé y digitalicé información clave.',
+      'Colaboré en la actualización de directorios y bases de datos.',
+      'Apoyé en la gestión de procesos financieros.',
+    ],
+  },
+];
+---
+
+<section id="experience" class="py-20" data-aos="fade-up">
+  <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Experiencia Profesional</h2>
+  <div class="space-y-12">
+    {
+      experiences.map((exp) => (
+        <div class="group hover:bg-white hover:shadow-xl transition-all duration-300 p-8 rounded-2xl border-l-4 border-primary">
+          <div class="flex justify-between items-start flex-wrap gap-4">
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-900 group-hover:text-primary transition-colors">{exp.company}</h3>
+              <p class="text-primary text-lg">{exp.position}</p>
+            </div>
+            <span class="text-gray-500 font-medium bg-gray-100 px-4 py-2 rounded-full">{exp.period}</span>
+          </div>
+          <ul class="list-none space-y-3 mt-6">
+            {exp.responsibilities.map((resp) => (
+              <li class="flex items-start gap-3">
+                <span class="text-primary mt-1">•</span>
+                <span class="text-gray-600">{resp}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,47 @@
+---
+const education = [
+  {
+    institution: 'Universidad del Magdalena',
+    degree: 'Licenciatura en Negocios Internacionales',
+    year: '2024',
+    location: 'Colombia',
+  },
+  {
+    institution: 'Universidad del Magdalena',
+    degree: 'Diplomado en Procedimientos Aduaneros & Logística Integral del Comercio Exterior',
+    year: '2024',
+    location: 'Colombia',
+  },
+  {
+    institution: 'SENA',
+    degree: 'Técnico en Operaciones Comerciales y Financieras',
+    year: '2018',
+    location: 'Colombia',
+  },
+  {
+    institution: 'I.E.D. Liceo Samario',
+    degree: 'Bachiller',
+    year: '2018',
+    location: 'Colombia',
+  },
+];
+---
+
+<section id="education" class="py-20" data-aos="fade-up">
+  <h2 class="text-3xl font-bold text-gray-900 mb-8">Educación</h2>
+  <div class="grid gap-6">
+    {
+      education.map((edu) => (
+        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+          <h3 class="text-xl font-semibold text-gray-900">{edu.institution}</h3>
+          <p class="text-primary">{edu.degree}</p>
+          <div class="flex gap-2 text-gray-500 mt-2">
+            <span>{edu.year}</span>
+            <span>•</span>
+            <span>{edu.location}</span>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
